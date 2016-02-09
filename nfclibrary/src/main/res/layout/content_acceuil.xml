@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:showIn="@layout/activity_initialisation"
+tools:context="com.sensoft.doulab.nfcreader.InitialisationActivity">
+
+
+    <!-- Header aligned to top -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#37699a"
+        android:gravity="center" >
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" POC NFC READER ACR122U  "
+            android:layout_gravity="center_horizontal"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+            android:layout_margin="5sp"
+            />
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:text="Fixed Header"-->
+        <!--android:textColor="#000"-->
+        <!--android:textSize="20sp" />-->
+
+    </RelativeLayout>
+
+    <!-- Footer aligned to bottom -->
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#37699a"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:layout_weight="2"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="    Version 1.0.0  "
+                    android:textColor="#FFF"
+                    android:textSize="15sp"
+                    android:layout_gravity="left"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo_sensoft"
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:text="Fixed Footer"-->
+        <!--android:textColor="#000"-->
+        <!--android:textSize="20sp" />-->
+    </RelativeLayout>
+
+    <!-- Scrollable Item below header and above footer -->
+    <ScrollView
+        android:id="@+id/scrollableContents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer"
+        android:background="#005d7d"
+        android:layout_below="@id/header" >
+    <!-- Inflate the contents of the ScrollView dynamicaly -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="120dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        />
+
+
+
+
+            <TextView
+                android:id="@+id/reussi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Encodage reussi"
+                android:background="#2b966e"
+                android:visibility="gone"
+                android:textSize="20sp"
+
+                />
+
+        </LinearLayout>
+
+
+
+
+</ScrollView>
+
+
+
+</RelativeLayout>

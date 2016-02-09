@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">NFCLibrary</string>
+
+    <string name="message_apposer_carte">Veuillez apposer la carte sur le lecteur et attendre la fin du traitement  svp...</string>
+    <string name="erreur_tag_invalid">La carte est invalide !!</string>
+    <!-- message lecture-->
+    <string name="info_wait_reading1">Lecture de la carte en cours&#8230;\nVeuillez patientez&#8230;</string>
+    <string name="info_wait_reading2">Lecture de la carte en cours&#8230;\n Veuillez ne pas retirer la carte&#8230;</string>
+    <string name="erreur_read_exception">Une erreur s\'est produite lors de la lecture de la carte !!</string>
+    <!-- fin message lecture -->
+    <!-- message ecriture-->
+    <string name="info_wait_writing1">Ecriture de la carte en cours&#8230;\nVeuillez patientez&#8230;</string>
+    <string name="info_wait_writing2">Ecriture de la carte en cours&#8230;\n  Veuillez ne pas retirer la carte&#8230;</string>
+    <string name="erreur_write_exception">Une erreur s\'est produite lors de l\'écriture de la carte !!</string>
+
+    <!-- fin message ecriture-->
+</resources>

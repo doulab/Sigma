@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/activity_encodage_screen"
+    tools:context="com.sensoft.doulab.nfcreader.EncodageScreenActivity">
+
+
+
+
+    <!-- Header aligned to top -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#f5f7f9"
+        android:gravity="center" >
+
+
+
+
+
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Encodage de la carte"
+            android:layout_gravity="center_horizontal"
+            android:textColorHint="#283cae"
+            android:textSize="15sp"
+            android:layout_margin="5sp"
+            />
+
+
+
+
+
+
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:text="Fixed Header"-->
+        <!--android:textColorHint="#000"-->
+        <!--android:textSize="20sp" />-->
+
+    </RelativeLayout>
+
+    <!-- Footer aligned to bottom -->
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#eceff1"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:layout_weight="2"
+                >
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                >
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:text="Fixed Footer"-->
+        <!--android:textColorHint="#000"-->
+        <!--android:textSize="20sp" />-->
+    </RelativeLayout>
+
+    <!-- Scrollable Item below header and above footer -->
+    <ScrollView
+        android:id="@+id/scrollableContents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer"
+        android:background="#eff3f4"
+        android:layout_below="@id/header" >
+
+        <!-- Inflate the contents of the ScrollView dynamicaly -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     >
+                    <TextView
+                        android:id="@+id/renseigne"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Veuillez mettre la carte sur le lecteur"
+                        android:textColor="#000"
+                        android:textSize="15sp"
+                        android:layout_margin="5sp"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+
+                    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" Recharger le lecteur "
+                        android:background="#19d1ff"
+                        android:textSize="15sp"
+                        android:onClick="spinner"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutLabelMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:background="@layout/fieldset_warning"
+                android:orientation="vertical"
+                android:padding="5dip"
+                >
+
+
+                <TextView
+                    android:id="@+id/textViewLabelMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="@string/message_apposer_carte"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#9F6000"
+                    />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:src="@drawable/nfc"
+
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

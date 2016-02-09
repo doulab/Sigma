@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/activity_lire" tools:context="com.sensoft.doulab.nfcreader.LireActivity">
+
+
+
+    <!-- Header aligned to top -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#37699a"
+        android:gravity="center" >
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint=" POC NFC READER ACR122U  "
+            android:layout_gravity="center_horizontal"
+            android:textColorHint="#FFF"
+            android:textSize="15sp"
+            android:layout_margin="5sp"
+            />
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:text="Fixed Header"-->
+        <!--android:textColorHint="#000"-->
+        <!--android:textSize="20sp" />-->
+
+    </RelativeLayout>
+
+    <!-- Footer aligned to bottom -->
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#37699a"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:layout_weight="2"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="    Version 1.0.0  "
+                    android:textColorHint="#FFF"
+                    android:textSize="15sp"
+                    android:layout_gravity="left"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo_sensoft"
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:text="Fixed Footer"-->
+        <!--android:textColorHint="#000"-->
+        <!--android:textSize="20sp" />-->
+    </RelativeLayout>
+
+    <!-- Scrollable Item below header and above footer -->
+    <ScrollView
+        android:id="@+id/scrollableContents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer"
+        android:background="#005d7d"
+        android:layout_below="@id/header" >
+
+        <!-- Inflate the contents of the ScrollView dynamicaly -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:background="#326693">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="INFORMATION DE LA CARTE"
+                    android:textColor="#FFF"
+                    android:textSize="15sp"
+                    android:layout_margin="15sp"
+                    />
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Code permanent :  "
+                    android:textColorHint="#FFF"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/lire_code_permanent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Code permanent"
+        android:textColorHint="#FFF"
+        android:textSize="15sp"
+        />
+</LinearLayout>
+
+
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Code Classe : "
+            android:textColorHint="#FFF"
+
+            android:textSize="15sp"
+            />
+
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/lire_code_classe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Code Classe"
+                android:textColorHint="#FFF"
+
+                android:textSize="15sp"
+                />
+</LinearLayout>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Montant porte monaie : "
+            android:textColorHint="#FFF"
+
+            android:textSize="15sp"
+            />
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/lire_wallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Wallet"
+            android:textColorHint="#FFF"
+
+            android:textSize="15sp"
+            />
+</LinearLayout>
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pin : "
+            android:textColorHint="#FFF"
+
+            android:textSize="15sp"
+            />
+</LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/lire_pin_wallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pin Wallet"
+                android:textColorHint="#FFF"
+
+                android:textSize="15sp"
+                />
+
+            </LinearLayout>
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Code année : "
+            android:textColorHint="#FFF"
+
+            android:textSize="15sp"
+            />
+          </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/lire_code_annee_ref"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Code année ref"
+                android:textColorHint="#FFF"
+
+                android:textSize="15sp"
+                />
+            </LinearLayout>
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date limite paiement : "
+            android:textColorHint="#FFF"
+
+            android:textSize="15sp"
+            />
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/lire_date_prochain_paiement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date procahin paiement"
+                android:textColorHint="#FFF"
+
+                android:textSize="15sp"
+                />
+            </LinearLayout>
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Numéro carte : "
+            android:textColorHint="#FFF"
+
+            android:textSize="15sp"
+            />
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/lire_numero_carte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Numéro carte"
+                android:textColorHint="#FFF"
+
+                android:textSize="15sp"
+                />
+</LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/acceuil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#19d1ff"
+                    android:text="Acceuil"
+                    android:textSize="10sp"
+                    android:onClick="acceuil"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginBottom="20sp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
