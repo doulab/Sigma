@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:checked="true"
+            android:icon="@drawable/home"
+            android:title="Acceuil" />
+        <item
+            android:id="@+id/pointe"
+            android:icon="@drawable/pointe"
+            android:title="Pointage" />
+        <item
+            android:id="@+id/commande"
+            android:icon="@drawable/commande"
+            android:title="Commande" />
+        <item
+            android:id="@+id/stat"
+            android:icon="@drawable/stat"
+            android:title="Statistique" />
+    </group>
+
+
+</menu>

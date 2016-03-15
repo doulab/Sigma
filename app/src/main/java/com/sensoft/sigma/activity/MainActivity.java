@@ -10,25 +10,23 @@ import com.sensoft.sigma.R;
 public class MainActivity extends AppCompatActivity {
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_main);
 
 
-
-
     }
 
 
+    public void connexion(View v) {
 
-    public void connexion (View v){
-
-        Intent intent = new Intent(MainActivity.this,ConnexionActivity.class);
+        Intent intent = new Intent(MainActivity.this, ConnexionActivity.class);
         startActivity(intent);
-    }public void inscription (View v){
-        Intent intent = new Intent(MainActivity.this,InscriptionActivity.class);
+    }
+
+    public void inscription(View v) {
+        Intent intent = new Intent(MainActivity.this, InscriptionActivity.class);
         startActivity(intent);
     }
 

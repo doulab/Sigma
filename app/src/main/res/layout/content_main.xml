@@ -21,10 +21,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="50dp">
 
 
-            <com.github.siyamed.shapeimageview.CircularImageView
+            <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -35,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="#af3010"
+                android:background="#e65912"
                 android:onClick="connexion"
                 android:text="Connexion"
                 android:textColor="#FFF"
@@ -45,7 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="#962b0e"
+                android:background="#e65912"
                 android:onClick="inscription"
                 android:text="Inscription"
                 android:textColor="#FFF"

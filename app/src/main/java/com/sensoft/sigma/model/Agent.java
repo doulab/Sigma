@@ -3,12 +3,16 @@ package com.sensoft.sigma.model;
 import java.io.Serializable;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Created by doulab on 24/01/16.
  */
 
 public class Agent extends RealmObject implements Serializable {
+
+    @PrimaryKey
+    private int id ;
 
     private String numeroAgent;
     private String prenom;
@@ -17,6 +21,7 @@ public class Agent extends RealmObject implements Serializable {
     private String adresse;
     private String telephone;
     private String email;
+    private String login;
     private String password;
     private String poste;
     private String imageAgent;
@@ -25,6 +30,16 @@ public class Agent extends RealmObject implements Serializable {
 
     private TypeAgent typeAgent;
 
+    public Agent() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getNumeroAgent() {
         return numeroAgent;
@@ -80,6 +95,14 @@ public class Agent extends RealmObject implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public String getPassword() {

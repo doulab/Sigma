@@ -19,7 +19,7 @@ public class ConnexionActivity extends AppCompatActivity {
 
     private static final String TAG = ConnexionActivity.class.getSimpleName();
 
-    EditText email, password;
+    EditText login, password;
     Realm realm;
     Agent agent;
 
@@ -27,14 +27,15 @@ public class ConnexionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
-        email = (EditText) findViewById(R.id.email);
+
+        login = (EditText) findViewById(R.id.login);
         password = (EditText) findViewById(R.id.password);
     }
 
     public void connexion(View v) {
 
-        if (email.getText().toString().length() == 0) {
-            email.setError("Veuillez saisir l'e-mail ");
+        if (login.getText().toString().length() == 0) {
+            login.setError("Veuillez saisir le login");
         } else if (password.getText().toString().length() == 0) {
             password.setError("Veuillez saisir le mot de passe");
         } else {
@@ -42,7 +43,7 @@ public class ConnexionActivity extends AppCompatActivity {
             realm = Realm.getInstance(this);
             RealmQuery<Agent> query = realm.where(Agent.class);
 
-            query.equalTo("email", email.getText().toString()).equalTo("password", password.getText().toString());
+            query.equalTo("login", login.getText().toString()).equalTo("password", password.getText().toString());
 
             // Execute the query:
             RealmResults<Agent> result = query.findAll();
@@ -54,10 +55,12 @@ public class ConnexionActivity extends AppCompatActivity {
 
                         String prenom = agent.getPrenom();
                         String nom = agent.getNom();
+                        String email = agent.getEmail();
                         Toast.makeText(getApplicationContext(),prenom+" "+nom,Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(getApplicationContext(),AcceuilActivity.class);
                         intent.putExtra("prenom",  prenom);
                         intent.putExtra("nom",  nom);
+                        intent.putExtra("email",  email);
                         startActivity(intent);
                     }
 
